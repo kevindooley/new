@@ -2,10 +2,11 @@ import time
 import numpy as np
 from random import randint
 import pandas as pd
+import seaborn as sns
 
 
 # Demonstration bubble sort
-# Adopted from source https://runestone.academy/runestone/books/published/pythonds/SortSearch/TheBubbleSort.html
+# Adapted from source https://runestone.academy/runestone/books/published/pythonds/SortSearch/TheBubbleSort.html
 # Supportive source https://www.youtube.com/watch?v=Vca808JTbI8
 
 def bubble_sort(alist): #define function called bubbleSort
@@ -18,8 +19,8 @@ def bubble_sort(alist): #define function called bubbleSort
     return alist
 
 # Demonstration Selection Sort
-# Adopted from https://www.pythoncentral.io/selection-sort-implementation-guide/
-# Adopted from https://www.youtube.com/watch?v=4CykZVqBuCw
+# Adapted from https://www.pythoncentral.io/selection-sort-implementation-guide/
+# Adapted from https://www.youtube.com/watch?v=4CykZVqBuCw
 
 def selection_sort(alist):
     # for every element in list alist -1 (until second last index, we can assume the last element in the highest value)
@@ -38,7 +39,7 @@ def selection_sort(alist):
 
 
 # Demonstration Insertion Sort
-# Adopted from https://stackabuse.com/sorting-algorithms-in-python/#insertionsort
+# Adapted from https://stackabuse.com/sorting-algorithms-in-python/#insertionsort
 
 def insertion_sort(alist):
     # For every value in alist. There would be no item to the left of the first item so we start at the second element and assume the first element is sorted.
@@ -63,8 +64,8 @@ def insertion_sort(alist):
 
 
 # Demonstration Insertion Sort
-# https://runestone.academy/runestone/books/published/pythonds/SortSearch/TheQuickSort.html
-# https://www.youtube.com/watch?v=CB_NCoxzQnk
+# Adapted from https://runestone.academy/runestone/books/published/pythonds/SortSearch/TheQuickSort.html
+# Adapted from https://www.youtube.com/watch?v=CB_NCoxzQnk
 
 #  define function quicksort
 def quick_sort(alist):
@@ -121,8 +122,10 @@ def partition(alist,first,last):
 
    return rightmark
 
+# Count Sort Demonstration
+# Adapted from https://www.w3resource.com/python-exercises/data-structures-and-algorithms/python-search-and-sorting-exercise-10.php
 
-#define function called counting_Sort. Takes 2 arguments - array to be sorted (array 1)and max value in array (100)
+#define function called counting_Sort. Takes 2 arguments - array to be sorted (array 1)and max value in array 
 #create counting array 
 #goes through array 1 and counts the number of instances of each element
 def counting_sort(array1, max_val):
