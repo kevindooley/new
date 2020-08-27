@@ -2,7 +2,7 @@ import time
 import numpy as np
 from random import randint
 import pandas as pd
-import seaborn as sns
+
 
 
 # Demonstration bubble sort
@@ -162,7 +162,7 @@ def random_array(n):
 # Code Adapted from Lecture notes: Benchmarking in Python
 # Code Adapted from https://gethowstuff.com/python-elapsed-time-milliseconds/
 
-global bubble_avg
+global bubble_avg # global variable to create variable outside function and use it within function
 bubble_avg = []
 runs= 10 # 10 iterations at each input n
 results = [] 
@@ -1405,28 +1405,3 @@ print (df) # print dataframe
 #use transpose function to put table in format as per project specification
 print(df.transpose())
 
-#plot 
-
-#Code adapted from https://github.com/RitRa/Algorithms-project-
-#give the plot a Title
-title="Benchmarking Sorting Algorithms"
-#Set aesthetic parameters
-#use of darkgrid and rainbow palettefor contrast
-#rc ‘run command’ used with sns.set will override standard
-#use figure with the figsize keyword to set dimensions
-sns.set(style="darkgrid", palette="gist_rainbow",font_scale = 2, rc={'figure.figsize':(20,10)})
-#Load the data from pd Dataframe created from the average lists in previous benchmarking steps
-#If bubble sort data is omitted, the results of the other algorithms can be seen more clearly.
-#bubble = sns.lineplot( x="Size", y="Bubble Sort", data=df, marker='o', label="Bubble Sort")
-bubble = sns.lineplot( x="Size", y="Bubble Sort", data=df, marker='o', label="Bubble Sort")
-selection = sns.lineplot( x="Size", y="Selection Sort", data=df, marker=">", label="Selection Sort")
-insertion = sns.lineplot( x="Size", y="Insertion Sort", data=df, marker=">",  label="Insertion Sort")
-quick = sns.lineplot( x="Size", y="Quick Sort", data=df, marker=">",  label="Quick Sort")
-counting = sns.lineplot( x="Size", y="Counting Sort", data=df, marker=">", label="Counting Sort")
-#Insert instruction for axes and plot title
-plt.xlabel('Random Array size n', fontsize=20)
-plt.ylabel('Running Time in milliseconds',fontsize=20)
-plt.title(title, fontsize=26)
-
-# Call show to display data visualisation
-plt.show()
